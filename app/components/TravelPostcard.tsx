@@ -10,25 +10,25 @@ import React, { useState, memo, useCallback } from 'react';
 const testimonials = [
   {
     destination: 'Bali',
-    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762082014/Feedback/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.mp4',
+    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762082014/Feedback/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.mp4',
     poster:   'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762082014/Feedback/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.jpg',
     fallback: '/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.mp4',
   },
   {
     destination: 'Thailand',
-    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762082060/Feedback/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.mp4',
+    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762082060/Feedback/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.mp4',
     poster:   'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762082060/Feedback/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.jpg',
     fallback: '/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.mp4',
   },
   {
     destination: 'Bali',
-    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762081962/Feedback/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.mp4',
+    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762081962/Feedback/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.mp4',
     poster:   'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762081962/Feedback/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.jpg',
     fallback: '/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.mp4',
   },
   {
     destination: 'Vietnam',
-    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762082108/Feedback/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.mp4',
+    video:    'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762082108/Feedback/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.mp4',
     poster:   'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762082108/Feedback/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.jpg',
     fallback: '/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.mp4',
   },

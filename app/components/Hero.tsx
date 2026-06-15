@@ -34,20 +34,32 @@ const Hero: React.FC = memo(() => {
           style={{ zIndex: 0 }}
         />
 
-        {/* ── Background video: preload="none" so it does NOT block page load.
-             The poster shows immediately; the video streams in the background
-             and replaces the poster once ready.                         */}
+        {/* ── Background video: served locally from /public/assets so it is
+             independent of any external CDN. preload="auto" starts fetching it
+             as soon as the page loads; the poster shows instantly meanwhile and
+             is replaced the moment the video can play. WebM (smaller) is offered
+             first, with the MP4 as a fallback for browsers without WebM support
+             (e.g. Safari).                                               */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
           muted
           loop
           playsInline
-          preload="none"
+          preload="auto"
           poster="/assets/hero-poster.webp"
           style={{ zIndex: 1 }}
+          onCanPlay={(e) => {
+            // Force playback in browsers that don't honour the autoPlay attribute
+            // on their own (e.g. low-power mode, Safari). Muted + playsInline keeps
+            // this within autoplay policy so it won't be blocked.
+            e.currentTarget.play().catch((err) => {
+              console.log('Hero autoplay play execution failed/blocked:', err);
+            });
+          }}
         >
-          <source src="https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762083042/tripsee_wtnu4o.mp4" type="video/mp4" />
+          <source src="/assets/tripsee.webm" type="video/webm" />
+          <source src="/assets/tripsee.mp4" type="video/mp4" />
         </video>
         
         {/* Overlay */}

@@ -161,7 +161,7 @@ const ReviewsPage = () => {
   const videoReviews = [
     {
       id: 1,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762082014/Feedback/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762082014/Feedback/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762082014/Feedback/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.jpg',
       fallback: '/Feedback/WhatsApp%20Video%202024-02-21%20at%2016.23.19_fd0537da.mp4',
       name: "Ms. Poonam & Mr. Pankaj",
@@ -170,7 +170,7 @@ const ReviewsPage = () => {
     },
     {
       id: 2,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762082060/Feedback/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762082060/Feedback/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762082060/Feedback/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.jpg',
       fallback: '/Feedback/WhatsApp%20Video%202024-12-23%20at%206.27.27%20PM.mp4',
       name: "Ms. Yashika & Mr. Ankush",
@@ -179,7 +179,7 @@ const ReviewsPage = () => {
     },
     {
       id: 3,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762081962/Feedback/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762081962/Feedback/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762081962/Feedback/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.jpg',
       fallback: '/Feedback/WhatsApp%20Video%202024-01-11%20at%2017.30.52.mp4',
       name: "Mr. Vaibhav & Mrs. Kashish",
@@ -188,7 +188,7 @@ const ReviewsPage = () => {
     },
     {
       id: 4,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/v1762082108/Feedback/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/v1762082108/Feedback/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/v1762082108/Feedback/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.jpg',
       fallback: '/Feedback/WhatsApp%20Video%202025-07-21%20at%204.08.19%20PM.mp4',
       name: "Ms. Pallavi and Mr. Ankit",
@@ -197,7 +197,7 @@ const ReviewsPage = () => {
     },
     {
       id: 5,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-06-30%20at%202.51.20%20PM%20(1).mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/Feedback/Feedback/WhatsApp%20Video%202024-06-30%20at%202.51.20%20PM%20(1).mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-06-30%20at%202.51.20%20PM%20(1).jpg',
       fallback: '/Feedback/WhatsApp%20Video%202024-06-30%20at%202.51.20%20PM%20(1).mp4',
       name: "Mr. Pranabh",
@@ -206,7 +206,7 @@ const ReviewsPage = () => {
     },
     {
       id: 6,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-04-24%20at%2020.06.07_e81e8432.mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/Feedback/Feedback/WhatsApp%20Video%202024-04-24%20at%2020.06.07_e81e8432.mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-04-24%20at%2020.06.07_e81e8432.jpg',
       fallback: '/Feedback/WhatsApp%20Video%202024-04-24%20at%2020.06.07_e81e8432.mp4',
       name: "Mr. Vikas",
@@ -215,7 +215,7 @@ const ReviewsPage = () => {
     },
     {
       id: 7,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-06-10%20at%2012.44.27_c8380109.mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/Feedback/Feedback/WhatsApp%20Video%202024-06-10%20at%2012.44.27_c8380109.mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-06-10%20at%2012.44.27_c8380109.jpg',
       fallback: '/Feedback/WhatsApp%20Video%202024-06-10%20at%2012.44.27_c8380109.mp4',
       name: "Kakkars",
@@ -224,7 +224,7 @@ const ReviewsPage = () => {
     },
     {
       id: 8,
-      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-05-07%20at%2017.06.28_77a16445.mp4',
+      video:  'https://res.cloudinary.com/dpknmji5i/video/upload/q_auto:eco,f_auto,w_640,c_limit/Feedback/Feedback/WhatsApp%20Video%202024-05-07%20at%2017.06.28_77a16445.mp4',
       poster: 'https://res.cloudinary.com/dpknmji5i/video/upload/so_0,q_auto,f_auto/Feedback/Feedback/WhatsApp%20Video%202024-05-07%20at%2017.06.28_77a16445.jpg',
       fallback: '/Feedback/WhatsApp%20Video%202024-05-07%20at%2017.06.28_77a16445.mp4',
       name: "Mr. Rakesh & FAM",
