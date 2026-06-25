@@ -408,14 +408,15 @@ const AndamanPage = ({ initialPackages = [] }: { initialPackages?: any[] }) => {
               </div>
 
               {/* Discover Button */}
-              <a
-                href="https://wa.me/918595682910?text=Hi! I'm interested in discovering more about Andaman destinations. Please help me plan my trip to this amazing island paradise."
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-contact-popup'));
+                }}
                 className="inline-block bg-transparent border-2 border-cyan-400 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 hover:bg-cyan-400 hover:text-gray-900 hover:scale-105 shadow-lg"
               >
-                DISCOVER LOCATION
-              </a>
+                BOOK NOW
+              </button>
             </div>
           </div>
 

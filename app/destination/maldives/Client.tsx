@@ -636,14 +636,15 @@ const MaldivesPage = ({ initialPackages = [] }: { initialPackages?: any[] }) => 
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 1 0 001.555.832l3-2a1 1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                 </svg>
               </div>
-              <a
-                href="https://wa.me/918595682910?text=Hi! I'm interested in discovering more about Maldives destinations. Please help me plan my trip to this paradise."
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-contact-popup'));
+                }}
                 className="inline-block bg-transparent border-2 border-white text-white px-4 py-2 sm:px-6 sm:py-3 lg:px-8 lg:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 hover:bg-white hover:text-gray-900 hover:scale-105"
               >
-                DISCOVER LOCATION
-              </a>
+                BOOK NOW
+              </button>
             </div>
           </div>
 

@@ -644,14 +644,15 @@ const DubaiPage = ({ initialPackages = [] }: { initialPackages?: any[] }) => {
               </div>
 
               {/* Discover Button */}
-              <a
-                href="https://wa.me/918595682910?text=Hi! I'm interested in discovering more about Dubai destinations. Please help me plan my trip to this amazing city."
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-contact-popup'));
+                }}
                 className="inline-block bg-transparent border-2 border-orange-500 text-orange-500 px-6 py-3 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-lg text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 hover:bg-orange-500 hover:text-white hover:scale-105 shadow-lg"
               >
-                DISCOVER LOCATION
-              </a>
+                BOOK NOW
+              </button>
             </div>
           </div>
 
