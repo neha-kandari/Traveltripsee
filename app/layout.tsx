@@ -124,7 +124,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         */}
         <Script
           id="tripsee-www-redirect-and-rescue"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(){

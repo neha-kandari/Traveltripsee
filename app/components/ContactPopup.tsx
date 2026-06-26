@@ -20,8 +20,6 @@ const ContactPopup = () => {
     message: ''
   });
 
-  const [showThankYou, setShowThankYou] = useState(false);
-
   // Show popup every 30 seconds
   useEffect(() => {
     const checkAndShowPopup = () => {
@@ -47,7 +45,6 @@ const ContactPopup = () => {
     // avoids prop-drilling or a context provider — the popup just listens.
     const openOnDemand = () => {
       setIsVisible(true);
-      setShowThankYou(false);
     };
     window.addEventListener('open-contact-popup', openOnDemand);
 
@@ -129,37 +126,25 @@ Please help me plan my perfect trip!`;
       const encodedMessage = encodeURIComponent(whatsappMessage);
       const whatsappUrl = `https://wa.me/918595682910?text=${encodedMessage}`;
       
-      // Redirect to WhatsApp
-      window.open(whatsappUrl, '_blank');
-      
-      // Show thank you message
-      setShowThankYou(true);
-      
-      // Reset form
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-      setErrors({
-        fullName: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
+      // Open Thank You page in a new tab, passing the pre-filled WhatsApp URL
+      // as a query param so the CTA button on that page sends the right message.
+      window.open(`/thank-you?wa=${encodeURIComponent(whatsappUrl)}`, '_blank');
+
+      // Close popup & reset form
+      setIsVisible(false);
+      setLastClosedTime(Date.now());
+      setFormData({ fullName: '', email: '', phone: '', message: '' });
+      setErrors({ fullName: '', email: '', phone: '', message: '' });
     }
   };
 
   const handleClose = () => {
     setIsVisible(false);
-    setShowThankYou(false);
     setLastClosedTime(Date.now());
   };
 
   const handleLater = () => {
     setIsVisible(false);
-    setShowThankYou(false);
     setLastClosedTime(Date.now());
   };
 
@@ -183,26 +168,7 @@ Please help me plan my perfect trip!`;
 
           {/* Modal Content */}
           <div className="p-4 sm:p-6 lg:p-8">
-            {showThankYou ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-2 font-limelight">Thank You!</h2>
-                <p className="text-gray-600 mb-6">
-                  We have received your details. You will now be redirected to WhatsApp to continue the conversation.
-                </p>
-                <button
-                  onClick={handleClose}
-                  className="bg-orange-500 text-white font-semibold py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors"
-                >
-                  Close
-                </button>
-              </div>
-            ) : (
-              <>
+            <>
                 {/* Header */}
                 <div className="text-center mb-4 sm:mb-6">
                   <h2 className="text-xl sm:text-2xl font-bold text-orange-500 mb-2 font-limelight">Planning a Trip?</h2>
@@ -291,8 +257,7 @@ Please help me plan my perfect trip!`;
                     </button>
                   </div>
                 </form>
-              </>
-            )}
+            </>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState } from 'react';
 import Header from '../components/Header';
@@ -91,23 +91,23 @@ Please get back to me with more details about your travel packages.`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
     const whatsappUrl = `https://wa.me/918595682910?text=${encodedMessage}`;
     
-    // Redirect to WhatsApp
-    window.open(whatsappUrl, '_blank');
-    
+    // Open Thank You page in a new tab with the pre-filled WhatsApp URL.
+    window.open(`/thank-you?wa=${encodeURIComponent(whatsappUrl)}`, '_blank');
+
     // Reset form
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
-      setErrors({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      });
+    setIsSubmitting(false);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
+    setErrors({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    });
   };
 
   return (
