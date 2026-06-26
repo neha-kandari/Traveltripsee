@@ -7,6 +7,7 @@ import Header from '../../../../components/Header';
 import Footer from '../../../../components/Footer';
 import Accordion from '../../../../components/Accordion';
 import HotelSection from '../../../../components/HotelSection';
+import ItineraryBookingForm from '../../../../components/ItineraryBookingForm';
 
 interface Itinerary {
   id: string;
@@ -359,67 +360,7 @@ const DynamicMalaysiaItineraryPage = () => {
             <div className="lg:col-span-1">
               <div className="bg-white rounded-2xl shadow-lg p-6 sticky top-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Book This Package</h3>
-                <form className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      placeholder="Your full name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <input
-                      type="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      placeholder="your.email@example.com"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                    <input
-                      type="tel"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      placeholder="+91 98765 43210"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Travel Date</label>
-                    <input
-                      type="date"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Number of Travelers</label>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
-                      <option value="1">1 Person</option>
-                      <option value="2">2 People</option>
-                      <option value="3">3 People</option>
-                      <option value="4">4 People</option>
-                      <option value="5+">5+ People</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Special Requirements</label>
-                    <textarea
-                      rows={3}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                      placeholder="Any special requests or requirements..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-orange-500 text-white py-3 px-6 rounded-lg font-medium hover:bg-orange-600 transition-colors duration-200"
-                  >
-                    Request Quote
-                  </button>
-                </form>
+                <ItineraryBookingForm packageTitle={itinerary?.title || "this package"} />
                 
                 <div className="mt-6 text-center">
                   <p className="text-sm text-gray-600 mb-2">Need immediate assistance?</p>
